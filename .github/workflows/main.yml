@@ -19,7 +19,7 @@ jobs:
   teste-env-2:
     runs-on: ubuntu-latest
     env:
-      ENV_JOB: "Valor Job test-env"
+      ENV_JOB: "Valor Job segundo test-env"
     steps:
       - name: Execução
         run: |
