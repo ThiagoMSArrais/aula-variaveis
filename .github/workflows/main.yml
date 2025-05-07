@@ -1,0 +1,28 @@
+name: Como usar variáveis de ambiente
+on:
+  workflow_dispatch:
+env:
+  ENV_WORKFLOW: "Valor Workflow"
+jobs:
+  teste-env:
+    runs-on: ubuntu-latest
+    env:
+      ENV_JOB: "Valor Job test-env"
+    steps:
+      - name: Execução
+        env:
+          ENV_ACTION: "Valor ACTION - Execução"
+        run: |
+          echo $ENV_WORKFLOW
+          echo $ENV_JOB
+          echo $ENV_ACTION
+  teste-env-2:
+    runs-on: ubuntu-latest
+    env:
+      ENV_JOB: "Valor Job test-env"
+    steps:
+      - name: Execução
+        run: |
+          echo $ENV_WORKFLOW
+          echo $ENV_JOB
+          echo $ENV_ACTION
